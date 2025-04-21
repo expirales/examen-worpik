@@ -56,7 +56,7 @@ function App() {
   };
 
   const handleCeilRightClick = (
-    e: React.MouseEvent<HTMLDivElement>,
+    e: React.MouseEvent<HTMLElement>,
     index: number
   ) => {
     e.preventDefault();
