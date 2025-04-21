@@ -4,6 +4,8 @@
 
 Consta de 3 componentes funcionales hechos en react que resuelven el ejercicio en cuestion.
 
+En el componente `Ceil` se hizo una optimización usando `memo` para mejorar el dibujo al momento de interactuar con la app.
+
 ## Tecnologias usadas,
 
 NodeJS Vite React TypeScript Javascript Sass y Html
