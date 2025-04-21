@@ -1,0 +1,21 @@
+@use "./styles/mixins.scss" as mixins;
+
+.cnt-grid {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  .ceil {
+    background-color: white;
+    color: transparent;
+
+    overflow-x: hidden;
+    @include mixins.button-colors(
+      (
+        red: red,
+        violet: violet,
+        blue: blue,
+        yellow: yellow,
+        green: green,
+      )
+    );
+  }
+}
