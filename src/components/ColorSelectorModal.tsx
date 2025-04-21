@@ -3,22 +3,22 @@ import "./ColorSelectorModal.scss";
 
 type ColorSelectorModalProps = {
   onRequestClose: (isShow: boolean) => void;
-  onHandleSelectedColor: (color: string) => void;
+  onSelectedColor: (color: string) => void;
   position: { x: number; y: number };
   isModalVisible: boolean;
 };
 
-const BUTTONS_COLORS = ["red", "green", "yellow", "blue", "violet"];
+const BUTTONS_COLORS = ["red", "green", "yellow", "violet", "blue"];
 export default function ColorSelectorModal({
   onRequestClose,
-  onHandleSelectedColor,
+  onSelectedColor,
   isModalVisible,
   position,
 }: ColorSelectorModalProps) {
   const handleCloseModal = (e: React.MouseEvent, color: string) => {
     e.stopPropagation();
     e.preventDefault();
-    onHandleSelectedColor(color);
+    onSelectedColor(color);
     onRequestClose(false);
   };
   return (

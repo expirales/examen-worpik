@@ -10,7 +10,7 @@ type CeilProps = {
   onMouseDown: () => void;
   onMouseUp: () => void;
   onMouseEnter: (index: number) => void;
-  onContextMenu: (e: React.MouseEvent, index: number) => void;
+  onContextMenu: (e: React.MouseEvent<HTMLDivElement>, index: number) => void;
   onClick: (index: number) => void;
 };
 

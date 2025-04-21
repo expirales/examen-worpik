@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import "./App.scss";
-import { cssClassNames } from "./utils/cssClassNames";
 import ColorSelectorModal from "./components/ColorSelectorModal";
 import Ceil from "./components/Ceil";
 
@@ -56,7 +55,10 @@ function App() {
     defaultColor.current = color;
   };
 
-  const handleCeilRightClick = (e, index: number) => {
+  const handleCeilRightClick = (
+    e: React.MouseEvent<HTMLDivElement>,
+    index: number
+  ) => {
     e.preventDefault();
     setIsPainting(false);
     setModalPosition({ x: e.clientX, y: e.clientY });
@@ -88,7 +90,7 @@ function App() {
           isModalVisible={isShowModal}
           position={modalPosition}
           onRequestClose={setIsShowModal}
-          onHandleSelectedColor={handleSelectCeilColor}
+          onSelectedColor={handleSelectCeilColor}
         />
       )}
     </div>
